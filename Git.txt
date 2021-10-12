@@ -1,18 +1,10 @@
 ﻿+
-
-
-  
-
-________________
-
-
-
-
+____________
 Git e GitHub
 
 
+_______
 Sumário
-
 
 1. Apresentação ✓
 2. Ferramentas ✓
@@ -39,17 +31,13 @@ Sumário
    3. Branchs
 
 
-________________
-
-
+____________
 Apresentação
-
 
 Este conteúdo tem como objetivo apresentar o básico para uso do Git e do GitHub.
 
 
-
-
+___________
 Ferramentas
 
 
@@ -61,69 +49,54 @@ Git Bash
 GitHubDesktop
 
 
-
-
+______________
 O quê é o Git?
-
 
 É um software de controle de versionamento.
 
 
-
-
+_______________
 O que é GitHub?
-
 
 É uma plataforma de hospedagem de código fonte e arquivos de controle de versão usando o git. Também é uma rede social para programadores e pessoas interessadas em estudar, compartilhar conhecimento e seus projetos.
 
 
-
-
+_______________
 O que é VScode?
 
 
 O Visual Studio Code é um editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS, e permite o controle Git incorporado.
 
 
-
-
+_______________
 O que é Chrome?
-
 
 É um navegador de internet com visual minimalista.
 
 
-
-
+_________________
 O que é Git Bash?
-
 
 É um aplicativo para ambientes da Microsoft Windows que oferece a camada de emulação para a experiência de linha de comando Git. Bash é acrônimo para " Bourne Again Shell". Shells são aplicativos terminais usados como interface em sistemas operacionais por meio de comandos gravados.
 
 
+______________________
 O que é GitHubDesktop?
-
 
 É uma aplicação com interface visual que amplia e simplifica o fluxo de trabalho no GitHub.com, em vez de comandos em texto na linha de comando.
 
 
-
-
+____________
 Fluxo do Git
 
-
 Quando se utiliza o Git para monitorar e versionar os arquivos e pastas de seu projeto, é necessário compreender seu fluxo dos estados desses arquivos e pastas. 
-
 
 1. arquivos 'não monitorados'
 2. arquivos com mudanças a serem confirmadas
 
-
 Quando é criado um novo arquivo ou é realizada a alteração em um arquivo "monitorado pelo Git", esse arquivo passa a ter seu estado 'não monitorado' (arquivos untracked).
 
-
 Ao concluir a edição desses arquivos será necessário adicioná-los ou deixá-los preparados para um commit. 
-
 
 Após preparados será possível realizar um commit.
 
@@ -133,8 +106,8 @@ Mas o que é um commit?
 Podemos entender que é confirmar que está pronto e assim passa a fazer parte do repositório final que contém os arquivos originais ou oficiais (em Produção).
 
 
+________________
 Assim o fluxo é:
-
 
 Working directory
 Staging area
@@ -150,8 +123,7 @@ O Staging area é o momento após a execução do comando 'git add' em que os ar
 Repositório Final do git é onde estão os arquivos originais após a  execução do comando 'git commit'.
 
 
-
-
+_______________
 Fluxo do GitHub
 
 
@@ -160,9 +132,7 @@ Quando há a necessidade de se trabalhar em diferentes ambientes físicos, como 
 
 Assim, é possível utilizar o comando 'git push' para enviar o conteúdo do repositório local do git de sua máquina para um repositório remoto, em seu perfil de usuário no GitHub.
 
-
-
-
+_________
 sequência
 	pasta/estado
 	descrição
@@ -194,13 +164,11 @@ arquivos oficiais atualizados e alocados
 	repositório remoto no seu perfil no GitHub
 	
 
-
-
+_____________________________
 Preparar o Git em sua máquina
 
 
 Baixar
-
 
 Acesse o site https://git-scm.com localize o instalador adequado para seu sistema operacional.
 Obs.: Em uma das etapas do instalador será perguntado qual editor será utilizado. Por padrão já vem selecionado o Vim. Mas se necessário poderá ser modificado para o VScode. Cuidado pois há duas versões do VScode.
@@ -208,12 +176,10 @@ Obs.: Em uma das etapas do instalador será perguntado qual editor será utiliza
 
 Instalar
 
-
 Execute e avance até concluir. Durante o processo de instalação, vem definido o Vim como sendo o editor padrão, orientamos que seja mudado para o VScode standart. Atenção para não selecionar a opção errada pois também existe a opção VScode Enterprise.
 
 
 Configurar
-
 
 Vamos configurar o usuário, email, e editor de código através do git bash
 
@@ -228,21 +194,16 @@ o nome de de sua máquina/computador
 caminho da sua pasta de trabalho
 
 
-
-
 Crie um perfil no GitHub
-
 
 Acesse o site https://github.com localize a opção 'Sign Up' e clique sobre, e será direcionado à página para 'criar sua conta'.
 
 
-
-
+____________________
 Comandos do Git Bash
 
-
+___________________
 Comandos em pastas:
-
 
 pwd   (print wornking directory)
 comando para exibir o diretório de trabalho atual.
@@ -315,10 +276,8 @@ exit
 comando para fechar a janela do Git Bash saindo e realizando o logout.
 
 
-
-
+_________________________
 Comandos Git - Introdução
-
 
 git version
 comando para exibir a versão do Git que está instalado na máquina.
@@ -339,6 +298,7 @@ git {comando} --help
 man git- {comando}
 
 
+_________________
 Criando o projeto
 
 
@@ -372,12 +332,7 @@ Seção básico
 
 
 
-
-
-
 ________________
-
-
 
 
 ________________
