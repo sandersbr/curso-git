@@ -1,0 +1,773 @@
+﻿+
+
+
+  
+
+________________
+
+
+
+
+Git e GitHub
+
+
+Sumário
+
+
+1. Apresentação ✓
+2. Ferramentas ✓
+3. O quê é o Git? ✓
+4. O que é GitHub? ✓
+5. O que é VScode? ✓
+6. O que é Chrome? ✓
+7. O que é Git Bash? ✓
+8. O que é GitHubDesktop? ✓
+9. Fluxo do Git ✓
+10. Fluxo do GitHub ✓
+11. Preparar o git em sua máquina ✓
+   1. Baixar, ✓
+   2. instalar ✓
+   3. configurar ✓
+12. Crie um perfil no Github ✓
+13. Comandos do Git Bash ✓
+   1. Comandos em pastas ✓
+   2. Comandos Git - Introdução
+   3. Comandos Git - básico
+14. Github e GitHubDesktop
+   1. Issues
+   2. Clonando repositórios
+   3. Branchs
+
+
+________________
+
+
+Apresentação
+
+
+Este conteúdo tem como objetivo apresentar o básico para uso do Git e do GitHub.
+
+
+
+
+Ferramentas
+
+
+Git
+GitHub
+VScode
+Chrome
+Git Bash
+GitHubDesktop
+
+
+
+
+O quê é o Git?
+
+
+É um software de controle de versionamento.
+
+
+
+
+O que é GitHub?
+
+
+É uma plataforma de hospedagem de código fonte e arquivos de controle de versão usando o git. Também é uma rede social para programadores e pessoas interessadas em estudar, compartilhar conhecimento e seus projetos.
+
+
+
+
+O que é VScode?
+
+
+O Visual Studio Code é um editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS, e permite o controle Git incorporado.
+
+
+
+
+O que é Chrome?
+
+
+É um navegador de internet com visual minimalista.
+
+
+
+
+O que é Git Bash?
+
+
+É um aplicativo para ambientes da Microsoft Windows que oferece a camada de emulação para a experiência de linha de comando Git. Bash é acrônimo para " Bourne Again Shell". Shells são aplicativos terminais usados como interface em sistemas operacionais por meio de comandos gravados.
+
+
+O que é GitHubDesktop?
+
+
+É uma aplicação com interface visual que amplia e simplifica o fluxo de trabalho no GitHub.com, em vez de comandos em texto na linha de comando.
+
+
+
+
+Fluxo do Git
+
+
+Quando se utiliza o Git para monitorar e versionar os arquivos e pastas de seu projeto, é necessário compreender seu fluxo dos estados desses arquivos e pastas. 
+
+
+1. arquivos 'não monitorados'
+2. arquivos com mudanças a serem confirmadas
+
+
+Quando é criado um novo arquivo ou é realizada a alteração em um arquivo "monitorado pelo Git", esse arquivo passa a ter seu estado 'não monitorado' (arquivos untracked).
+
+
+Ao concluir a edição desses arquivos será necessário adicioná-los ou deixá-los preparados para um commit. 
+
+
+Após preparados será possível realizar um commit.
+
+
+Mas o que é um commit? 
+ 
+Podemos entender que é confirmar que está pronto e assim passa a fazer parte do repositório final que contém os arquivos originais ou oficiais (em Produção).
+
+
+Assim o fluxo é:
+
+
+Working directory
+Staging area
+Repositório Final do git
+
+
+No working directory, ou diretório de trabalho, é local ou momento em que seus arquivos estão em edição.
+
+
+O Staging area é o momento após a execução do comando 'git add' em que os arquivos editados tiveram seu estado alterado de 'untracked' (não monitorado) para 'modified' (modificados) e estão aguardando serem enviados para o substituírem os arquivos originais (oficiais) no diretório final do git. Na ramificação atual (current branch).
+
+
+Repositório Final do git é onde estão os arquivos originais após a  execução do comando 'git commit'.
+
+
+
+
+Fluxo do GitHub
+
+
+Quando há a necessidade de se trabalhar em diferentes ambientes físicos, como trabalho, faculdade ou residência, é interessante usar o recurso da nuvem por sua flexibilidade, disponibilidade e acessibilidade.
+
+
+Assim, é possível utilizar o comando 'git push' para enviar o conteúdo do repositório local do git de sua máquina para um repositório remoto, em seu perfil de usuário no GitHub.
+
+
+
+
+sequência
+	pasta/estado
+	descrição
+	1
+	working directory
+ / untracked
+	é sua pasta de trabalho e que contém arquivos em edição
+	-
+	git add
+	comando
+	2
+	staging area
+ / modified
+	é um estágio em que o arquivo criado, editado ou alterado está pronto para ser enviado ao repositório final do git.
+arquivos prontos
+	-
+	git commit
+	comando
+	3
+	repositório do git
+ / current branch
+	é no local onde você ou outras pessoas pegaram os arquivos para originais e prontos para começar a trabalhar.
+arquivos oficiais atualizados e alocados
+	-
+	git push
+	comando para enviar os arquivos da sua branch ao GitHub na mesma branch
+	4
+	repositório remoto
+	repositório remoto no seu perfil no GitHub
+	
+
+
+
+Preparar o Git em sua máquina
+
+
+Baixar
+
+
+Acesse o site https://git-scm.com localize o instalador adequado para seu sistema operacional.
+Obs.: Em uma das etapas do instalador será perguntado qual editor será utilizado. Por padrão já vem selecionado o Vim. Mas se necessário poderá ser modificado para o VScode. Cuidado pois há duas versões do VScode.
+
+
+Instalar
+
+
+Execute e avance até concluir. Durante o processo de instalação, vem definido o Vim como sendo o editor padrão, orientamos que seja mudado para o VScode standart. Atenção para não selecionar a opção errada pois também existe a opção VScode Enterprise.
+
+
+Configurar
+
+
+Vamos configurar o usuário, email, e editor de código através do git bash
+
+
+Clique no menu iniciar do Windows, digite git bash e o execute, ou localize sua pasta de trabalho, selecione-a, clique com o botão direito, selecione a opção 'Git Bash Here'.
+
+
+Será aberto a janela preta do git bash e nele será possível visualizar:
+o seu nome de usuário do SO
+@
+o nome de de sua máquina/computador
+caminho da sua pasta de trabalho
+
+
+
+
+Crie um perfil no GitHub
+
+
+Acesse o site https://github.com localize a opção 'Sign Up' e clique sobre, e será direcionado à página para 'criar sua conta'.
+
+
+
+
+Comandos do Git Bash
+
+
+Comandos em pastas:
+
+
+pwd   (print wornking directory)
+comando para exibir o diretório de trabalho atual.
+
+
+ls   (list)
+comando para listar o conteúdo do diretório de trabalho atual.
+
+
+mkdir nome.  (make directory)
+comando para criar uma nova pasta com o nome, nome.
+
+
+rmdir nome   (remove directory)
+comando para remover (deletar/apagar) a pasta com o nome, nome, do diretório atual, se estiverem vazios.
+
+
+rmdir /s nome
+comando para remover a pasta nome, se essa pasta tiver subpastas. remove a pasta especificada e todas as subpastas, inclusive os arquivos
+
+
+cd   (change directory)
+comando que vai até ou acessa ou abre a pasta onde está localizado o executável git-bash.exe. Normalmente, a pasta Git localizada na pasta arquivos e programas de seu SO.
+
+
+cd /c/teste/projeto01
+comando que vai até ou acessa ou abre a pasta projeto01
+
+
+cd /c/teste/projeto\ 03
+comando que vai até ou acessa ou abre para a pasta projeto 03
+
+
+cd TAB(botão)
+exibe ...
+
+
+cd caminho da pasta
+acessa/entra diretamente na pasta do caminho ditado.
+
+
+cd caminho da pasta/TAB(botão 2 cliques)
+exibe, lista, o nome das pastas internas
+obs.: se após a barra for digitado um ou mais caracteres que coincidam com o nome de alguma interna e clicar TAB a palavra será autocompletada.
+
+
+cd..
+sair da pasta para um nível acima.
+sai da pasta atual para a pasta imediatamente anterior um nível acima.
+
+
+mkdir
+mdkir novo_nome
+cria uma nova pasta com o nome novo_nome
+
+
+mkdir novo_nome\ 1
+cria uma nova pasta com o nome novo_nome 1
+
+
+clear
+limpa a tela
+
+
+help
+…
+
+
+exit
+comando para fechar a janela do Git Bash saindo e realizando o logout.
+
+
+
+
+Comandos Git - Introdução
+
+
+git version
+comando para exibir a versão do Git que está instalado na máquina.
+
+
+git --config user.name "John Doe"
+comando para configurar o nome do usuário do Git para John Doe.
+
+
+git --config user.email "johndoe@exemple.com"
+comando para configurar o endereço de e-mail  no Git para johndoe@exemple.com
+
+
+git help
+Se você precisar de ajuda
+git help {comando}
+git {comando} --help
+man git- {comando}
+
+
+Criando o projeto
+
+
+iniciando um repositório em um diretório existente: 
+git init
+comando para criar um novo subdiretório chamado .git que contém todos os arquivos necessários de seu repositório - um esqueleto de repositório Git. Neste ponto, nada em seu projeto é monitorado. Esse comando deve ser executado para iniciar o monitoramento de um projeto existente com Git. 
+
+
+primeira versão
+touch .gitignore
+git add .gitignore
+git commit -m "versão inicial do projeto"
+caso você queira começar o versionamento dos arquivos existentes (diferente de um diretório vazio), você provavelmente deve começar  monitorar esses arquivos e fazer um commit inicial. você pode realizar isso com poucos comandos (acima).
+
+
+git clone [url]
+você clona um repositório. ex.: 
+git clone git://GitHub.com/shacon/grit.git
+
+
+git checkout -b 
+comando para criar para criar uma branch específica.
+
+
+git checkout -b alteracao-de-cor
+comando para criar uma branch com o nome alteracao-de-cor.
+
+
+continua aqui https://vomandosgit.github.io
+Seção básico
+
+
+
+
+
+
+________________
+
+
+
+
+________________
+
+
+
+
+Procedimentos para realizar a configuração
+
+
+Vamos configurar o nome de usuário, email e editor de código. Digite:
+
+
+git config --global user.name ""
+digite Enter
+git config --global user.email ""
+digite Enter
+git config --global core.editor "caminho_do_executavel do editor"
+git config --global --list
+
+
+Para consultar basta digitar
+
+
+git version
+digite Enter
+git config  user.name ""
+digite Enter
+git config  user.email ""
+digite Enter
+git config core.editor
+digite Enter
+
+
+
+
+Comandos
+
+
+Comandos em pastas
+
+
+pwd
+comando para exibir o diretório de trabalho atual
+
+
+ls
+comando para listar o conteúdo do diretório de trabalho atual
+cd
+"Change Directory"
+vai(acessa/abre) para a pasta master
+
+
+cd /c/teste/projeto01
+vai(acessa/abre) para a pasta projeto01
+
+
+cd /c/teste/projeto\ 03
+vai(acessa/abre)  para a pasta projeto 03
+
+
+cd TAB(botão)
+exibe ...
+
+
+cd caminho da pasta
+acessa/entra diretamente na pasta do caminho ditado.
+
+
+cd caminho da pasta/TAB(botão 2 cliques)
+exibe, lista, o nome das pastas internas
+obs.: se após a barra for digitado um ou mais caracteres que coincidam com o nome de alguma interna e clicar TAB a palavra será autocompletada.
+
+
+cd..
+sair da pasta para um nível acima
+sai da pasta atual para a pasta imediatamente anterior um nível acima.
+
+
+mkdir
+mdkir novo_nome
+cria uma nova pasta com o nome novo_nome
+
+
+mkdir novo_nome\ 1
+cria uma nova pasta com o nome novo_nome 1
+
+
+clear
+limpa a tela
+
+
+help
+exibe 
+
+
+
+
+Comandos git - Introdução ou Fluxo básico
+
+
+git init
+comando para criar um repositório git
+git init Enter (botão)
+será criado um diretório oculto .git
+
+
+git status
+comando para consultar o status atual do repositório
+mensagens de retorno:
+
+
+
+
+Initial commit
+
+
+nothing to commit (creste/copy filés and use "git add" tô track)
+
+
+
+
+Initial commit
+
+
+untracked files: (use "git add <file>..." to include um that will be committed)
+
+
+arquivo.extensão em vermelho
+
+
+nothing added tô commit but untracked files present (use "git add" tô track)
+
+
+
+
+Initial commit
+
+
+Changes to be committed: (use "git rm --cached <file>..." to unstage(
+
+
+arquivos.extensão em verde
+
+
+
+
+On branch master
+nothing to commit, working directory clean
+
+
+
+
+git add
+comando para começar a monitorar os arquivos para o controle de versão.
+passar os arquivos do working directory para a staging area.
+
+
+
+
+git add nome_do_arquivo_e_extensão
+git add *
+git add *. extensão
+git add .
+
+
+git commit
+salvar as mudanças no meu projeto.
+tira os arquivos da staging area e confirmando as alterações enviando para o repositório final do git.
+
+
+git commit 
+git commit -m "mensagem"
+
+
+obs.: Ao clicar Enter após o 'git commit' o cursor vai para a próxima longe esperar que seja digitado uma mensagem.
+
+
+[master (root-commit) 79efae4] commit initial
+2 files changes, 0 insertions(+), 0 deletions (-)
+create mode 100644 changelog.txt
+create mode 100644 readme.txt
+
+
+
+
+
+
+Comandos git - básico
+
+
+…
+
+
+
+
+Processo
+
+
+* Abrir bash
+* Entrar na pasta de trabalho
+* Criar/inicializar um repositório git
+* Comece a trabalhar criando seus arquivos de seu projeto
+* Realize o fluxo básico de monitoramento
+
+
+Se houver algum arquivo que você não queira o monitoramento, ou seja, esse arquivo será ignorado em seu projeto.
+
+
+* crie o arquivo sem nome
+.gitignore
+* dentro do arquivo . gitignore escreva uma informação em cada linha. ex.:
+. gitignore
+readme.txt
+temp/
+
+
+obs.: Quando houver a barra a direita não será um arquivo e sim uma pasta
+* ...
+
+
+Aqui
+
+
+
+
+
+
+03 - COMANDOS
+
+
+Comandos de gerenciamento de pastas
+
+
+cd
+entrar na pasta
+ex.:
+cd nome da pasta de dentro do diretório atual
+cd caminho da pasta
+cd..
+sair da pasta para um nível acima
+clear
+limpa a tela
+
+
+Comandos do git
+
+
+git init
+comando para 
+git add
+comando para mover os arquivos da working directory (pasta de trabalho) para a staging área.
+git commit
+comando para mover os arquivos da staging area para o repositório final do git, que é a base de onde você pegou os arquivos para começar a trabalhar
+git status
+comando para monitorar a situação dos arquivos de seu projeto
+
+
+
+
+Etapas
+
+
+1. Instalar git
+   1. Baixar
+   2. Instalar
+   3. Configurar
+2. Configuração
+
+
+Passo a passo
+
+
+1. Crie manualmente uma pasta de trabalho
+2. Abra o git bash e veja que ele exibe: 
+nome do usuário
+@
+nome da sua máquina
+localização das suas linhas de comandos
+3. Vamos criar uma repositório, local para git
+No gitbash digite o comando:
+git init
+
+
+Será exibido a seguinte mensagem de retorno:
+inicializado um diretório git vazio em caminho da pasta e trabalho
+
+
+4. agora podemos monitorar/ratrear o status do repositório seu/git
+No gitbash digite o comando:
+git status
+
+
+Será exibido a mensagem de retorno:
+Nada para commitar
+(crie/copie arquivos e use "git add" para monitorar)
+ex.:
+git add nome_do_arquivo_com_extensão
+git add *.txt
+git add .
+git add *
+
+
+5. Trabalhe normalmente criando e editando os seus arquivos (que fazem parte de seu projeto). 
+
+
+6. Agora com novos arquivos criados, ao realizar a consulta do status do diretório pelo git bash será possível identificar esses arquivos na cor vermelha.
+No gitbash digite o comando:
+git status
+
+
+Será exibido a mensagem de retorno:
+Arquivos não monitorados 
+(use "git add nome_do_arquivo" para incluir no que será colorado
+
+
+Exibe esses em vermelho cada arquivo não monitorado
+
+
+nada adicionado para commitar, mas arquivos aos não rastreados presentes use "git add" para commitar
+
+
+7. Para adicionar:
+ex.:
+git add nome_do_arquivo_com_extensão
+git add *.txt
+git add .
+git add *
+depois que você utilizou o git add para adicionar seus arquivos
+você pode usar o git status e será exibido a seguinte mensagem de retorno
+
+
+Alterações para serem commitadas
+(use git rm --cached <file> para unstage)
+
+
+Exibindo em verde os novos arquivos adicionados para commitar
+
+
+Quando você utiliza o git add, você está fazendo seu arquivo sair do "working directory" e passar ele para a staging area (área de espera) antes de enviar ele (commitar/salvar as alterações que a gente fez), o próximo passo é tirar eles da staging area e enviar para o repositório, isso é feito através do git commit pois ele é o comando de commitar, de salvar as mudanças de seu projeto.
+
+
+8. git commit -m "mensagem para identificar o commit"
+ex.:
+commit inicial
+arquivos base do projeto
+
+
+
+
+Após clicar Enter será exibida a mensagem:
+Nada para commitar, working directory clean
+
+
+9. …
+
+
+
+
+Diagrama
+
+
+[ 1 ] --(git add)-- > [ 2 ] --(git commit)-- > [ 3 ] 
+
+
+[ 1 ] working directory
+criando e editando arquivos ou novos arquivos
+aguardando git add
+[ 2 ] staging area
+aguardando git commit
+[ 3 ] repositório
+final 
+pronto para distribuição ou push
+
+
+
+
+
+
+CLONAR
+
+
+é fazer o git / versionamento de um repositório que foi baixado (download)
+
+
+
+
+LEITURA COMPLEMENTAR
+
+
+
+
+https://comandosgit.github.com
