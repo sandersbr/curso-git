@@ -1,0 +1,98 @@
+Através desse arquivo você será orientado como proceder para realizar a integração do git em seu computador com sua conta no github
+
+-----------
+Requisitos:
+- ter o git instalado em seu computador;
+- ter acesso ao gitbash;
+- ter uma conta no github.
+
+------------
+Necessidade:
+- Permitir que o computador local possa interagir como sua conta no github tendo acesso através de chaves ssh.
+
+
+-------------
+Passo a passo:
+
+---------------------------------------------
+Etapa 0 - Verificar se já há alguma chave ssh
+
+Verificando as chaves SSH existentes
+Antes de gerar uma chave SSH, você pode verificar se possui alguma chave SSH existente.
+
+ + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ | Observação: o GitHub está melhorando a segurança eliminando tipos de chave mais antigos e inseguros.
+ | As chaves DSA ( ssh-dss) não são mais suportadas. As chaves existentes continuarão a funcionar até 15 de março de 2022. Você não pode adicionar novas chaves DSA à sua conta de usuário em GitHub.com.
+ | As chaves RSA ( ssh-rsa) com um valid_afterantes de 2 de novembro de 2021 podem continuar a usar qualquer algoritmo de assinatura. As chaves RSA geradas após essa data devem usar um algoritmo de assinatura SHA-2. Alguns clientes mais antigos podem precisar ser atualizados para usar as assinaturas SHA-2.
+ + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+1. Abra o Git Bash.
+
+2. Digite ls -al ~/.ssh para ver se as chaves SSH existentes estão presentes.
+
+$ ls -al ~/.ssh
+# Lists the files in your .ssh directory, if they exist
+
+- Verifique a lista de diretórios para ver se você já tem uma chave SSH pública. Por padrão, os nomes de arquivo das chaves públicas com suporte para GitHub são um dos seguintes.
+id_rsa.pub
+id_ecdsa.pub
+id_ed25519.pub
+
+ + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+ | Dica : Se você receber um erro informando que ~ / .ssh não existe, você não tem um par de chaves SSH existente no local padrão. Você pode criar um novo par de chaves SSH na próxima etapa.
+ + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+3. Gere uma nova chave SSH ou carregue uma chave existente.
+
+- Se você não tem um par de chaves pública e privada compatível ou não deseja usar nenhum dos disponíveis, gere uma nova chave SSH.
+- Se você vir um par de chaves pública e privada existente listado (por exemplo, id_rsa.pub e id_rsa ) que gostaria de usar para se conectar ao GitHub, você pode adicionar a chave ao agente ssh.
+
+Para obter mais informações sobre a geração de uma nova chave SSH ou adição de uma chave existente ao ssh-agent, consulte " Gerando uma nova chave SSH e adicionando-a ao ssh-agent ."
+
+
+fonte: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys
+
+
+--------------------------------------------------------------
+Etapa 1 - Vamos gerar um par de chaves ssh através do git bash
+
+Em seu computador
+- Abra o gitbash;
+- Insira o comando  ssh-keygen
+- Pressione Enter
+- Será gerado um par de chaves e exibidas as seguintes mensagens
+Generating public/private rsa key pair || Gerando par de chaves rsa pública / privada
+Enter file in which to save the key  seguido do caminho do diretório || Insira o arquivo no qual deseja salvar a chave
+- Pressione Enter
+- Serão exibidas as seguintes mensagens
+Created directory 'caminhdo do diretório'. || Diretório criado
+Enter passphrase (empty for passphrase) ||  Digite a senha longa (vazio para a senha longa)
+- Pressione Enter
+Enter passphrase again: || Digite a senha novamente:
+- pressione enter
+Your identification has been saved in caminho do diretório dos arquivos das chaves ssh || Sua identificação foi salva em caminho do diretorio das chaves ssh
+Your public key has been saved in caminho do diretório da chave publica ssh || Sua chave pública foi salva em diretório da chave publica ssh 
+The key fingerprint is: || A impressão digital principal é:
+
+
+--------------------------------------------------------------------
+Etapa 2 - Realizar associação na conta github com a chave ssh gerada
+
+Em seu computador
+- Acesse o diretório onde estão localizados os arquivos ssh
+- Abra o arquivo com extensão .pub em um bloco de notas
+- Selecione e copie todo o código exibido no bloco de notas
+
+Acesse sua conta do git hub
+- Clique em Settings, dentro do menu de sua conta localizado no canto direito superior
+- Clique em SSH and GPG keys, no menu lateral esquerdo
+- Clique no botão New SSH Key
+No campo Title
+- Digite o titulo da sua chave. Como dica uma descrição que identifique o nome do dispositivo que gerou a chave ssh
+No campo Key
+- Insira a chave ssh que foi anteriormente copiada do arquivo .pud através do bloco de notas
+- Clique no  botão Add SSH key
+Agora está salva a chave SSH e já é possivel acessar o github através do gitbash do dispositivo que gerou a chave ssh
+
+
+
